@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>iWeather</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+    <ion-grid *ngIf="weather">
+        <ion-row>
+            <ion-col width-50 offset-25>
+                <h1 class="location">{{ weather.name }}, {{ weather.sys.country }}</h1>
+                <div class="icon">
+                    <img src="{{ icon }}" alt="Icon">
+                </div>
+                <div class="description" *ngFor="let item of weather.weather">
+                    <h3>{{ item.main }}</h3>
+                </div>
+                <!-- <div class="icon" *ngFor="let item of weather.weather">
+                    <img src="http://openweathermap.org/img/w/{{ item.icon }}.png" alt="">
+                </div> -->
+                <h2 class="temp">{{ toCelsius(weather.main.temp) }} <span>ºC</span></h2>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col width-100>
+                <ion-list>
+                    <ion-item>
+                        <strong>Temp Max: </strong>{{ toCelsius(weather.main.temp_max) }} <span>ºC</span> ({{ toFahrenheit(weather.main.temp_max) }} ºF)
+                    </ion-item>
+                    <ion-item>
+                        <strong>Temp Min: </strong>{{ toCelsius(weather.main.temp_min) }} <span>ºC</span> ({{ toFahrenheit(weather.main.temp_min) }} ºF)
+                    </ion-item>
+                    <ion-item>
+                        <strong>Relative Humidity: </strong>{{ weather.main.humidity }} <span>%</span>
+                    </ion-item>
+                    <ion-item>
+                        <strong>Wind: </strong>{{ toKm(weather.wind.speed) }} <span>Km/h</span>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

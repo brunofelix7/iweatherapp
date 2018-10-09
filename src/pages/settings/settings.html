@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Settings</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col width-100>
+                <form (ngSubmit)="saveSettings()">
+                    <ion-label>City</ion-label>
+                    <ion-item>
+                        <ion-input [(ngModel)]="city" name="city" type="text" placeholder="Enter city..."></ion-input>
+                    </ion-item>
+                    <br />
+                    <button ion-button color="green" type="submit" block>Save changes</button>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

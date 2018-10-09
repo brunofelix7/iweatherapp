@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Account</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+    <ion-grid>
+        <ion-row>
+            <ion-col width-50 offset-25>
+                <div class="icon">
+                    <img src="{{ icon }}" alt="Icon">
+                </div>
+                <div class="description">
+                    <p>{{ email }}</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col width-100>
+                <ion-list>
+                    <ion-item>
+                        <button ion-button block color="danger" (click)="logout()">Logout</button>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

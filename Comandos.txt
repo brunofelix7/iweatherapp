@@ -1,0 +1,35 @@
+INSTALACAO IONIC
+--------------------------
+- Node
+- Npm
+- Cordova
+- Ioic
+
+COMANDOS
+--------------------------
+npm install -g cordova
+npm install -g ionic
+npm install -g cordova ionic
+ionic start ProjectName blank | tabs
+ionic serve
+ionic lab
+ionic serve --lab
+ionic g page login
+ionic g provider NameProvider
+
+PASSO A PASSO FIREBASE
+--------------------------
+- Criar um projeto no Firebase
+- Configurar metodo de Autenticacao
+- Configuracoes da Web e copiar o conteudo
+- Cirar arquivo config.ts dentro de src e colar o conteudo
+- npm install firebase angularfire2
+- Importar os modulos e o arquivo de configuracao em app.module.ts
+- Criar model user.ts
+- Criar provider auth.ts
+- Usar o provider no login.ts
+
+COMANDOS PREFERENCES
+--------------------------
+ionic cordova plugin add cordova-plugin-app-preferences
+npm install --save @ionic-native/app-preferences
